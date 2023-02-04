@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Exemplo07_2_useContext } from "./hooks/Exemplo07_2_useContext";
+import { Exemplo08_useRef } from "./hooks/Exemplo08_useRef";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Exemplo07_2_useContext />
+    <Exemplo08_useRef />
   </React.StrictMode>
 );
