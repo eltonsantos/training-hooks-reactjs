@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Exemplo05_useEffect } from "./hooks/Exemplo05_useEffect";
+import { Exemplo06_useEffect } from "./hooks/Exemplo06_useEffect";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Exemplo05_useEffect />
+    <Exemplo06_useEffect />
   </React.StrictMode>
 );
