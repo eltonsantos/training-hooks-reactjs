@@ -9,6 +9,7 @@ export function ProjetoFinal({
   idade,
   cidade,
   selecionar,
+  alterar,
 }) {
   return (
     <>
@@ -48,6 +49,7 @@ export function ProjetoFinal({
               type="button"
               value="Alterar"
               className="btn btn-secondary"
+              onClick={alterar}
             />
             <input type="button" value="Excluir" className="btn btn-danger" />
             <input type="button" value="Cancelar" className="btn btn-success" />
@@ -79,7 +81,12 @@ function Tabela({ vetor, selecionar }) {
             <td>{obj.idade}</td>
             <td>{obj.cidade}</td>
             <td>
-              <button className="btn btn-success" onClick={() => selecionar(indice)}>Selecionar</button>
+              <button
+                className="btn btn-success"
+                onClick={() => selecionar(indice)}
+              >
+                Selecionar
+              </button>
             </td>
           </tr>
         ))}

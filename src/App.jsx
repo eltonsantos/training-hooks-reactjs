@@ -28,6 +28,17 @@ export function App() {
     setBtnCadastrar(false);
   };
 
+  const alterar = () => {
+    let obj = { nome, idade, cidade };
+    let copiaVetor = [...vetor];
+    copiaVetor[indiceVetor] = obj;
+    setVetor(copiaVetor);
+    setNome("");
+    setIdade("");
+    setCidade("");
+    setBtnCadastrar(true);
+  };
+
   return (
     <ProjetoFinal
       btnCadastrar={btnCadastrar}
@@ -40,6 +51,7 @@ export function App() {
       idade={idade}
       cidade={cidade}
       selecionar={selecionar}
+      alterar={alterar}
     />
   );
 }
