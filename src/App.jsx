@@ -1,3 +1,7 @@
+import { useState } from "react";
+import { ProjetoFinal } from "./hooks/ProjetoFinal";
+
 export function App() {
-  return <h1>Hooks</h1>;
+  const [btnCadastrar, setBtnCadastrar] = useState(true);
+  return <ProjetoFinal btnCadastrar={btnCadastrar} />;
 }
