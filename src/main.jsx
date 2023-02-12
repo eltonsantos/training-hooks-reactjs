@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Exemplo11_useCallback } from "./hooks/Exemplo11_useCallback";
+import { ProjetoFinal } from "./hooks/ProjetoFinal";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Exemplo11_useCallback />
+    <ProjetoFinal />
   </React.StrictMode>
 );
