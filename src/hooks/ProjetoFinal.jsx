@@ -5,6 +5,9 @@ export function ProjetoFinal({
   setCidade,
   cadastrar,
   vetor,
+  nome,
+  idade,
+  cidade,
 }) {
   return (
     <>
@@ -13,18 +16,21 @@ export function ProjetoFinal({
           type="text"
           placeholder="Nome"
           className="form-control"
+          value={nome}
           onChange={(e) => setNome(e.target.value)}
         />
         <input
           type="text"
           placeholder="Idade"
           className="form-control"
+          value={idade}
           onChange={(e) => setIdade(e.target.value)}
         />
         <input
           type="text"
           placeholder="Cidade"
           className="form-control"
+          value={cidade}
           onChange={(e) => setCidade(e.target.value)}
         />
 

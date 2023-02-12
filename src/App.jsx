@@ -11,6 +11,10 @@ export function App() {
   const cadastrar = () => {
     let obj = { nome, idade, cidade };
     setVetor([...vetor, obj]);
+
+    setNome("");
+    setIdade("");
+    setCidade("");
   };
 
   return (
@@ -21,6 +25,9 @@ export function App() {
       setCidade={setCidade}
       cadastrar={cadastrar}
       vetor={vetor}
+      nome={nome}
+      idade={idade}
+      cidade={cidade}
     />
   );
 }
