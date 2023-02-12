@@ -9,9 +9,9 @@ export function App() {
   const [vetor, setVetor] = useState([]);
 
   const cadastrar = () => {
-    let obj = { 'nome' : nome, 'idade' : idade, 'cidade': cidade};
-    setVetor([...vetor, obj])
-  }
+    let obj = { nome, idade, cidade };
+    setVetor([...vetor, obj]);
+  };
 
   return (
     <ProjetoFinal
@@ -20,6 +20,7 @@ export function App() {
       setIdade={setIdade}
       setCidade={setCidade}
       cadastrar={cadastrar}
+      vetor={vetor}
     />
   );
 }

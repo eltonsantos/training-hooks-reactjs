@@ -4,6 +4,7 @@ export function ProjetoFinal({
   setIdade,
   setCidade,
   cadastrar,
+  vetor,
 }) {
   return (
     <>
@@ -46,12 +47,12 @@ export function ProjetoFinal({
           </div>
         )}
       </form>
-      <Tabela />
+      <Tabela vetor={vetor} />
     </>
   );
 }
 
-function Tabela() {
+function Tabela({ vetor }) {
   return (
     <table className="table">
       <thead>
@@ -63,7 +64,19 @@ function Tabela() {
           <th>Selecionar</th>
         </tr>
       </thead>
-      <tbody></tbody>
+      <tbody>
+        {vetor.map((obj, indice) => (
+          <tr key={indice}>
+            <td>{indice + 1}</td>
+            <td>{obj.nome}</td>
+            <td>{obj.idade}</td>
+            <td>{obj.cidade}</td>
+            <td>
+              <button className="btn btn-success">Selecionar</button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 }
