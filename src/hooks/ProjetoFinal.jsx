@@ -11,6 +11,7 @@ export function ProjetoFinal({
   selecionar,
   alterar,
   remover,
+  cancelar,
 }) {
   return (
     <>
@@ -58,7 +59,12 @@ export function ProjetoFinal({
               className="btn btn-danger"
               onClick={remover}
             />
-            <input type="button" value="Cancelar" className="btn btn-success" />
+            <input
+              type="button"
+              value="Cancelar"
+              className="btn btn-success"
+              onClick={cancelar}
+            />
           </div>
         )}
       </form>

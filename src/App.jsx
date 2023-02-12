@@ -49,6 +49,13 @@ export function App() {
     setBtnCadastrar(true);
   };
 
+  const cancelar = () => {
+    setNome("");
+    setIdade("");
+    setCidade("");
+    setBtnCadastrar(true);
+  };
+
   return (
     <ProjetoFinal
       btnCadastrar={btnCadastrar}
@@ -63,6 +70,7 @@ export function App() {
       selecionar={selecionar}
       alterar={alterar}
       remover={remover}
+      cancelar={cancelar}
     />
   );
 }
