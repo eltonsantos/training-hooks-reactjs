@@ -8,6 +8,7 @@ export function ProjetoFinal({
   nome,
   idade,
   cidade,
+  selecionar,
 }) {
   return (
     <>
@@ -53,12 +54,12 @@ export function ProjetoFinal({
           </div>
         )}
       </form>
-      <Tabela vetor={vetor} />
+      <Tabela vetor={vetor} selecionar={selecionar} />
     </>
   );
 }
 
-function Tabela({ vetor }) {
+function Tabela({ vetor, selecionar }) {
   return (
     <table className="table">
       <thead>
@@ -78,7 +79,7 @@ function Tabela({ vetor }) {
             <td>{obj.idade}</td>
             <td>{obj.cidade}</td>
             <td>
-              <button className="btn btn-success">Selecionar</button>
+              <button className="btn btn-success" onClick={() => selecionar(indice)}>Selecionar</button>
             </td>
           </tr>
         ))}

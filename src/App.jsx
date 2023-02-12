@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ProjetoFinal } from "./hooks/ProjetoFinal";
 
 export function App() {
+  const [indiceVetor, setIndiceVetor] = useState("");
   const [btnCadastrar, setBtnCadastrar] = useState(true);
   const [nome, setNome] = useState("");
   const [idade, setIdade] = useState("");
@@ -17,6 +18,16 @@ export function App() {
     setCidade("");
   };
 
+  const selecionar = (indice) => {
+    setIndiceVetor(indice);
+
+    setNome(vetor[indice].nome);
+    setIdade(vetor[indice].idade);
+    setCidade(vetor[indice].cidade);
+
+    setBtnCadastrar(false);
+  };
+
   return (
     <ProjetoFinal
       btnCadastrar={btnCadastrar}
@@ -28,6 +39,7 @@ export function App() {
       nome={nome}
       idade={idade}
       cidade={cidade}
+      selecionar={selecionar}
     />
   );
 }
