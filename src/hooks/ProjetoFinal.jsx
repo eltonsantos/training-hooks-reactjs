@@ -1,13 +1,39 @@
-export function ProjetoFinal({ btnCadastrar }) {
+export function ProjetoFinal({
+  btnCadastrar,
+  setNome,
+  setIdade,
+  setCidade,
+  cadastrar,
+}) {
   return (
     <>
       <form>
-        <input type="text" placeholder="Nome" className="form-control" />
-        <input type="text" placeholder="Idade" className="form-control" />
-        <input type="text" placeholder="Cidade" className="form-control" />
+        <input
+          type="text"
+          placeholder="Nome"
+          className="form-control"
+          onChange={(e) => setNome(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Idade"
+          className="form-control"
+          onChange={(e) => setIdade(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Cidade"
+          className="form-control"
+          onChange={(e) => setCidade(e.target.value)}
+        />
 
         {btnCadastrar ? (
-          <input type="button" value="Cadastrar" className="btn btn-primary" />
+          <input
+            type="button"
+            value="Cadastrar"
+            className="btn btn-primary"
+            onClick={cadastrar}
+          />
         ) : (
           <div>
             <input
