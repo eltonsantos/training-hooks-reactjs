@@ -39,6 +39,16 @@ export function App() {
     setBtnCadastrar(true);
   };
 
+  const remover = () => {
+    let copiaVetor = [...vetor];
+    copiaVetor.splice(indiceVetor, 1);
+    setVetor(copiaVetor);
+    setNome("");
+    setIdade("");
+    setCidade("");
+    setBtnCadastrar(true);
+  };
+
   return (
     <ProjetoFinal
       btnCadastrar={btnCadastrar}
@@ -52,6 +62,7 @@ export function App() {
       cidade={cidade}
       selecionar={selecionar}
       alterar={alterar}
+      remover={remover}
     />
   );
 }
